@@ -6,10 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ToDoApp</title>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Muli&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="app-wrapper">
+        <h1>To Do List</h1>
+        <section class="input-section">
+            <h2>Add a task</h2>
+            <input type="text">
+        </section>
+        <section class="todo-container">
+            <div class="todo-item">Do the shopping<i class="fas fa-trash-alt"></i></div>
+            <div class="todo-item">Feed the cat<i class="fas fa-trash-alt"></i></div>
+        </section>
+        <section class="done-container">
+            <div class="todo-item">Wash dishes<i class="fas fa-trash-alt"></i></div>
+            <div class="todo-item">Clean a sink<i class="fas fa-trash-alt"></i></div>
+        </section>
+    </div>
     <script src="main.js"></script>
 </body>
 
