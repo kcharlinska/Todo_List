@@ -6,11 +6,12 @@
 
 :root {
     --main-color: #FDB0BE;
+    --main-fonts: #b4b7bf;
 }
 
 html {
     font-family: 'Muli', sans-serif;
-    color: #758099;
+    color: var(--main-fonts);
 }
 
 .app-wrapper {
@@ -28,6 +29,12 @@ html {
     color: #fff;
 }
 
+.todo-item--checked {
+    background-color: #fff;
+    color: var(--main-fonts);
+    text-decoration: line-through;
+}
+
 .todo-item .todo__dot {
     position: absolute;
     top: 50%;
@@ -38,6 +45,11 @@ html {
     border-radius: 50%;
     background-color: var var(--main-color);
     border: 2px solid #fff;
+}
+
+.todo-item .todo__dot.todo__dot--checked {
+    background-color: var(--main-fonts);
+    /* border: 2px solig var(--main-fonts); */
 }
 
 .todo-item .todo__remove-ico {
