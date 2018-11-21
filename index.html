@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ToDoApp</title>
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Muli&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Stoke&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -14,20 +14,19 @@
 
 <body>
     <div class="app-wrapper">
-        <h1>To Do List</h1>
+        <h1>My ToDo List</h1>
+        <p>Monday 17th April</p>
         <section class="input-section">
-            <h2>Add a task</h2>
-            <input type="text">
+            <h2>Add a task <i class="fas fa-plus"></i></h2>
+            <input class="add-input" type="text">
         </section>
         <section class="todo-container">
-            <div class="todo-item"><span class="todo__dot"></span>Do the shopping<i class="todo__remove-ico far fa-trash-alt"></i></div>
-            <div class="todo-item"><span class="todo__dot"></span>Feed the cat<i class="todo__remove-ico far fa-trash-alt"></i></div>
+            <div class="todo-item">Do the shopping<i class="todo__remove-ico far fa-trash-alt"></i></div>
+            <div class="todo-item">Feed the cat<i class="todo__remove-ico far fa-trash-alt"></i></div>
         </section>
         <section class="done-container">
-            <div class="todo-item todo-item--checked"><span class="todo__dot todo__dot--checked"></span>Wash dishes<i
-                    class="todo__remove-ico far fa-trash-alt"></i></div>
-            <div class="todo-item todo-item--checked"><span class="todo__dot todo__dot--checked"></span>Clean a sink<i
-                    class="todo__remove-ico far fa-trash-alt"></i></div>
+            <div class="todo-item todo-item--checked">Wash dishes<i class="todo__remove-ico far fa-trash-alt"></i></div>
+            <div class="todo-item todo-item--checked">Clean a sink<i class="todo__remove-ico far fa-trash-alt"></i></div>
         </section>
     </div>
     <script src="main.js"></script>
