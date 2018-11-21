@@ -14,19 +14,26 @@
 
 <body>
     <div class="app-wrapper">
-        <h1>My ToDo List</h1>
-        <p>Monday 17th April</p>
-        <section class="input-section">
-            <h2>Add a task <i class="fas fa-plus"></i></h2>
+        <main class="main-section">
+            <h1>My ToDo List</h1>
+            <p>Monday 17th April</p>
+            <form action="">
+                <input class="todo-input" type="text">
+                <h3 class="add-button"><i class="fas fa-plus"></i> Add a task</h3>
+            </form>
+        </main>
+        <!-- <section class="input-section">
             <input class="add-input" type="text">
-        </section>
+        </section> -->
         <section class="todo-container">
-            <div class="todo-item">Do the shopping<i class="todo__remove-ico far fa-trash-alt"></i></div>
-            <div class="todo-item">Feed the cat<i class="todo__remove-ico far fa-trash-alt"></i></div>
+            <div class="todo-item">Do the shopping<i class="todo__edit-ico fas fa-pencil-alt"></i><i class="todo__remove-ico far fa-trash-alt"></i></div>
+            <div class="todo-item">Feed the cat<i class="todo__edit-ico fas fa-pencil-alt"></i><i class="todo__remove-ico far fa-trash-alt"></i></div>
         </section>
         <section class="done-container">
-            <div class="todo-item todo-item--checked">Wash dishes<i class="todo__remove-ico far fa-trash-alt"></i></div>
-            <div class="todo-item todo-item--checked">Clean a sink<i class="todo__remove-ico far fa-trash-alt"></i></div>
+            <div class="todo-item todo-item--checked">Wash dishes<i class="todo__edit-ico fas fa-pencil-alt"></i><i
+                    class="todo__remove-ico far fa-trash-alt"></i></div>
+            <div class="todo-item todo-item--checked">Clean a sink<i class="todo__edit-ico fas fa-pencil-alt"></i><i
+                    class="todo__remove-ico far fa-trash-alt"></i></div>
         </section>
     </div>
     <script src="main.js"></script>

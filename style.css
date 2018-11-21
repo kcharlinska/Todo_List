@@ -22,44 +22,47 @@ html {
     padding: 12% 6%;
 }
 
-.app-wrapper h1 {
+.main-section h1 {
     font-family: 'Stoke', serif;
     font-size: 2.5rem;
     text-align: center;
-    /* padding: 40px 20px; */
 }
 
-.app-wrapper p {}
-
-.input-section .add-input {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    line-height: 3;
-    background-color: var(--backgroundColor);
-    border-style: none;
-    border-bottom: 2px solid #fff;
-}
-
-.input-section h2 {
-    text-align: right;
+.main-section p {
     font-size: .8rem;
-    /* margin-right: 10px; */
-    color: var(--main-color);
+    padding: 5px 0;
 }
 
-/* .input-section h2 .fa-plus {} */
+.main-section h3 {
+    color: var(--main-color);
+    text-align: right;
+    font-size: 1rem;
+    margin-top: -17px;
+    margin: -17px 0 40px 0;
+}
 
+.todo-input,
+.todo-item {
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px var(--main-fontColor);
+    line-height: 3;
+    margin: 20px 0;
+}
+
+.todo-input {
+    width: 100%;
+    font-size: 1rem;
+    color: var(--main-fontColor);
+    background-color: #fff;
+    border: 1px solid var(--main-fontColor);
+    padding: 0 20px;
+}
 
 .todo-item {
     position: relative;
-    background: linear-gradient(to right, var(--main-color) 0, #fcc1c1 100%);
-    line-height: 3;
-    margin: 20px 0;
-    padding: 0 55px;
-    border-radius: 8px;
     color: #fff;
-    box-shadow: 1px 1px 1px #a9a9a9;
+    background: linear-gradient(to right, var(--main-color) 0, #fcc1c1 100%);
+    padding: 0 55px;
 }
 
 .todo-item::before {
@@ -77,9 +80,9 @@ html {
 }
 
 .todo-item--checked {
-    background: #fff;
     color: var(--main-fontColor);
     text-decoration: line-through;
+    background: #fff;
 }
 
 .todo-item--checked::before {
@@ -87,9 +90,17 @@ html {
     border: 2px solid var(--main-fontColor);
 }
 
+
 .todo-item .todo__remove-ico {
     position: absolute;
     top: 50%;
     right: 20px;
+    transform: translateY(-50%);
+}
+
+.todo-item .todo__edit-ico {
+    position: absolute;
+    top: 50%;
+    right: 45px;
     transform: translateY(-50%);
 }
