@@ -5,8 +5,8 @@
 }
 
 :root {
-    --main-color: #F8ABAB;
-    --main-fontColor: #b4b7bf;
+    --main-color: #fe9090;
+    --main-fontColor: #999eac;
     --backgroundColor: #f5f5f5;
 }
 
@@ -24,7 +24,7 @@ html {
 
 .main-section h1 {
     font-family: 'Stoke', serif;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
 }
 
@@ -37,8 +37,8 @@ html {
     color: var(--main-color);
     text-align: right;
     font-size: 1rem;
-    margin-top: -17px;
-    margin: -17px 0 40px 0;
+    margin: -12px 0 40px 0;
+    cursor: pointer;
 }
 
 .todo-input,
@@ -46,7 +46,7 @@ html {
     border-radius: 8px;
     box-shadow: 1px 1px 1px var(--main-fontColor);
     line-height: 3;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .todo-input {
@@ -61,12 +61,15 @@ html {
 .todo-item {
     position: relative;
     color: #fff;
-    background: linear-gradient(to right, var(--main-color) 0, #fcc1c1 100%);
-    padding: 0 55px;
+    background: linear-gradient(to right, var(--main-color) 0, #f9ad7e 100%);
+    padding: 0 70px 0 50px;
+    /* white-space: nowrap;
+            overflow: hidden; */
+    /* text-overflow: clip; */
+    word-wrap: break-word;
 }
 
-.todo-item::before {
-    content: '';
+.todo-item .todo-dot {
     position: absolute;
     top: 50%;
     left: 20px;
@@ -76,6 +79,7 @@ html {
     border-radius: 50%;
     background-color: var var(--main-color);
     border: 2px solid #fff;
+    cursor: pointer;
     /* box-shadow: 0 0 3px grey; */
 }
 
@@ -85,7 +89,7 @@ html {
     background: #fff;
 }
 
-.todo-item--checked::before {
+.todo-item--checked .todo-dot {
     background-color: var(--main-fontColor);
     border: 2px solid var(--main-fontColor);
 }
@@ -96,6 +100,7 @@ html {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .todo-item .todo__edit-ico {
@@ -103,4 +108,5 @@ html {
     top: 50%;
     right: 45px;
     transform: translateY(-50%);
+    cursor: pointer;
 }
