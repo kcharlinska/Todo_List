@@ -1,40 +1,64 @@
-const addBtn = document.querySelector('.add-button');
 const input = document.querySelector('.todo-input');
-const toDoContainer = document.querySelector('.todo-container');
-const doneContainer = document.querySelector('.done-container');
+const toDoSection = document.querySelector('.todo-section');
+const doneSection = document.querySelector('.done-section');
+
+let active = true;
 
 const currentDate = new Date().toDateString();
 // const day = currentDate.get
-
+// TODO: change date format
 document.querySelector('.main-section p').textContent = currentDate;
 
-
-const addToDo = (e) => {
-    const toDoText = input.value;
-    if (toDoText === '') return;
-    const toDoItem = document.createElement('div');
-    toDoItem.className = 'todo-item';
-    toDoItem.innerHTML = `<div class="todo-dot"></div>${toDoText}<i class="todo__edit-ico fas fa-pencil-alt"></i><i class="todo__remove-ico far fa-trash-alt"></i>`;
-    toDoContainer.appendChild(toDoItem);
-    if (toDoItem.clientHeight > input.clientHeight) {
-        toDoItem.style.lineHeight = '1.5';
-        toDoItem.style.padding = '5px 70px 5px 50px';
+input.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13) {
+        e.preventDefault();
     }
+})
+
+const addToDo = () => {
+    const txt = input.value;
+    if (txt === '') return;
+    const toDoItem = document.createElement('div');
+    toDoItem.className = 'todo-container';
+    toDoItem.innerHTML = `<div class="todo-dot"><i class="far fa-circle"></i></div>
+    <div class="todo-text">${txt}</div>
+    <div class="todo-icons"><i class="fas fa-pencil-alt"></i><i class="far fa-trash-alt"></i>
+    </div>`;
+    const toDoText = toDoItem.children[1];
+    toDoSection.appendChild(toDoItem);
+    if (toDoItem.clientHeight > input.clientHeight) {
+        toDoText.classList.add('todo-text--long');
+    }
+    // FIXME: check height again after resizing the window and change 'todo-text--long' class
     input.value = '';
-    toDoItem.querySelector('.todo__remove-ico').addEventListener('click', deleteToDo);
-    toDoItem.querySelector('.todo__edit-ico').addEventListener('click', editToDo);
-    toDoItem.querySelector('.todo-dot').addEventListener('click', doneToDo)
+    toDoItem.querySelector('.fa-trash-alt').addEventListener('click', deleteToDo);
+    toDoItem.querySelector('.fa-pencil-alt').addEventListener('click', editToDo);
+    toDoItem.querySelector('.todo-dot .fa-circle').addEventListener('click', doneToDo);
 }
 
 const doneToDo = (e) => {
-    doneContainer.appendChild(e.target.parentNode);
-    e.target.parentNode.classList.add('todo-item--checked');
+    const toDoItem = e.target.parentNode.parentNode;
+    toDoItem.classList.contains('todo-container--checked') ? active = false : active = true;
+    active ? doneSection.appendChild(toDoItem) : toDoSection.appendChild(toDoItem);
+    toDoItem.classList.toggle('todo-container--checked');
 }
 
 const deleteToDo = (e) => {
-    e.target.parentNode.remove();
+    e.target.parentNode.parentNode.remove();
 }
 
-const editToDo = (e) => {}
+const editToDo = (e) => {
+    const toDoItem = e.target.parentNode.previousElementSibling;
+    toDoItem.contentEditable = true;
+    toDoItem.focus();
+    toDoItem.onkeyup = function () {
+        toDoItem.clientHeight > input.clientHeight ? toDoItem.classList.add('todo-text--long') : toDoItem.classList.remove('todo-text--long');
+    }
+    // FIXME: remove contentEditable after click outside todo
+    // const isClickInside = toDoItem.parentNode.contains(e.target);
+    // if (!isClickInside) {
+    //     toDoItem.contentEditable = false;
+    // }
+}
 
-addBtn.addEventListener('click', addToDo)
+document.querySelector('.add-button').addEventListener('click', addToDo)
