@@ -5,9 +5,12 @@
 }
 
 :root {
-    --main-color: #fe9090;
-    --main-fontColor: #999eac;
-    --backgroundColor: #f5f5f5;
+    --main-fontColor: #5b5b5b;
+    --inactive-fontColor: #b8b8b8;
+    --activeToDo: #fe9090;
+    --backgroundColor: #F2F4F8;
+    --dots-width: 12%;
+    --icons-width: 18%;
 }
 
 html {
@@ -34,17 +37,21 @@ html {
 }
 
 .main-section h3 {
-    color: var(--main-color);
+    color: var(--activeToDo);
     text-align: right;
     font-size: 1rem;
     margin: -12px 0 40px 0;
     cursor: pointer;
+    transition: .5s;
+}
+
+.main-section h3:hover {
+    color: var(--inactive-fontColor);
 }
 
 .todo-input,
-.todo-item {
+.todo-container {
     border-radius: 8px;
-    box-shadow: 1px 1px 1px var(--main-fontColor);
     line-height: 3;
     margin: 15px 0;
 }
@@ -54,59 +61,126 @@ html {
     font-size: 1rem;
     color: var(--main-fontColor);
     background-color: #fff;
-    border: 1px solid var(--main-fontColor);
+    border: 1px solid #cdcdcd;
+    /* box-shadow: 0 0 1px grey; */
     padding: 0 20px;
 }
 
-.todo-item {
-    position: relative;
+.todo-container {
+    display: flex;
+    width: 100%;
     color: #fff;
-    background: linear-gradient(to right, var(--main-color) 0, #f9ad7e 100%);
-    padding: 0 70px 0 50px;
-    /* white-space: nowrap;
-            overflow: hidden; */
-    /* text-overflow: clip; */
+    background: linear-gradient(to right, var(--activeToDo) 0, #f9ad7e 100%);
+}
+
+.todo-text--long {
+    line-height: 1.5;
+    padding: 8px 0;
+}
+
+.todo-container .todo-dot {
+    position: relative;
+    flex-basis: var(--dots-width);
+    background-color: var var(--main-color);
+    cursor: pointer;
+}
+
+.todo-dot .fa-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+}
+
+.todo-dot .fa-circle:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.todo-text {
+    flex-grow: 1;
+    max-width: calc(100% - var(--dots-width) - var(--icons-width));
     word-wrap: break-word;
 }
 
-.todo-item .todo-dot {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: var var(--main-color);
-    border: 2px solid #fff;
-    cursor: pointer;
-    /* box-shadow: 0 0 3px grey; */
-}
-
-.todo-item--checked {
-    color: var(--main-fontColor);
+.todo-container--checked {
+    color: var(--inactive-fontColor);
     text-decoration: line-through;
     background: #fff;
 }
 
-.todo-item--checked .todo-dot {
-    background-color: var(--main-fontColor);
-    border: 2px solid var(--main-fontColor);
+.todo-icons {
+    flex-basis: var(--icons-width);
+    position: relative;
 }
 
-
-.todo-item .todo__remove-ico {
+.todo-icons .fa-pencil-alt,
+.fa-trash-alt {
     position: absolute;
     top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     cursor: pointer;
+    transition: .3s;
 }
 
-.todo-item .todo__edit-ico {
-    position: absolute;
-    top: 50%;
-    right: 45px;
-    transform: translateY(-50%);
-    cursor: pointer;
+.todo-icons .fa-pencil-alt:hover,
+.fa-trash-alt:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.todo-icons .fa-pencil-alt {
+    left: 30%;
+}
+
+.todo-icons .fa-trash-alt {
+    left: 70%;
+}
+
+@media (orientation: landscape) {
+    .app-wrapper {
+        padding: 6% 12%;
+    }
+}
+
+@media (min-width: 641px) {
+    .todo-icons {
+        flex-basis: 12%;
+    }
+
+    .todo-text {
+        max-width: calc(100% - var(--dots-width) - 12%);
+    }
+}
+
+@media (min-width: 1026px) {
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        background-color: var(--main-fontColor);
+    }
+
+    .app-wrapper {
+        min-height: 94vh;
+        margin: 3% 34%;
+        padding: 4% 2%;
+        border-radius: 28px;
+        box-shadow: 5px 5px 5px #343434;
+    }
+
+    .todo-icons {
+        flex-basis: 18%;
+    }
+
+    .todo-text {
+        max-width: calc(100% - var(--dots-width) - 18%);
+    }
+}
+
+@media (min-width: 1280px) {
+    .app-wrapper {
+        margin: 3% 36%;
+        padding: 4% 2%;
+    }
 }
