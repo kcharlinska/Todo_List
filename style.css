@@ -25,18 +25,18 @@ html {
     padding: 12% 6%;
 }
 
-.main-section h1 {
+.main__section h1 {
     font-family: 'Stoke', serif;
     font-size: 2.2rem;
     text-align: center;
 }
 
-.main-section p {
+.main__section p {
     font-size: .8rem;
     padding: 5px 0;
 }
 
-.main-section h3 {
+.main__section h3 {
     color: var(--activeToDo);
     text-align: right;
     font-size: 1rem;
@@ -45,18 +45,18 @@ html {
     transition: .5s;
 }
 
-.main-section h3:hover {
+.main__section h3:hover {
     color: var(--inactive-fontColor);
 }
 
-.todo-input,
-.todo-container {
+.todo__input,
+.todo__container {
     border-radius: 8px;
     line-height: 3;
     margin: 15px 0;
 }
 
-.todo-input {
+.todo__input {
     width: 100%;
     font-size: 1rem;
     color: var(--main-fontColor);
@@ -66,26 +66,26 @@ html {
     padding: 0 20px;
 }
 
-.todo-container {
+.todo__container {
     display: flex;
     width: 100%;
     color: #fff;
     background: linear-gradient(to right, var(--activeToDo) 0, #f9ad7e 100%);
 }
 
-.todo-text--long {
+.todo__text--long {
     line-height: 1.5;
     padding: 8px 0;
 }
 
-.todo-container .todo-dot {
+.todo__container .todo__dot {
     position: relative;
     flex-basis: var(--dots-width);
     background-color: var var(--main-color);
     cursor: pointer;
 }
 
-.todo-dot .fa-circle {
+.todo__dot .fa-circle {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -93,28 +93,28 @@ html {
     transition: .3s;
 }
 
-.todo-dot .fa-circle:hover {
+.todo__dot .fa-circle:hover {
     transform: translate(-50%, -50%) scale(1.2);
 }
 
-.todo-text {
+.todo__text {
     flex-grow: 1;
     max-width: calc(100% - var(--dots-width) - var(--icons-width));
     word-wrap: break-word;
 }
 
-.todo-container--checked {
+.todo__container--checked {
     color: var(--inactive-fontColor);
     text-decoration: line-through;
     background: #fff;
 }
 
-.todo-icons {
+.todo__icons {
     flex-basis: var(--icons-width);
     position: relative;
 }
 
-.todo-icons .fa-pencil-alt,
+.todo__icons .fa-pencil-alt,
 .fa-trash-alt {
     position: absolute;
     top: 50%;
@@ -123,16 +123,16 @@ html {
     transition: .3s;
 }
 
-.todo-icons .fa-pencil-alt:hover,
+.todo__icons .fa-pencil-alt:hover,
 .fa-trash-alt:hover {
     transform: translate(-50%, -50%) scale(1.2);
 }
 
-.todo-icons .fa-pencil-alt {
+.todo__icons .fa-pencil-alt {
     left: 30%;
 }
 
-.todo-icons .fa-trash-alt {
+.todo__icons .fa-trash-alt {
     left: 70%;
 }
 
@@ -143,11 +143,11 @@ html {
 }
 
 @media (min-width: 641px) {
-    .todo-icons {
+    .todo__icons {
         flex-basis: 12%;
     }
 
-    .todo-text {
+    .todo__text {
         max-width: calc(100% - var(--dots-width) - 12%);
     }
 }
@@ -169,11 +169,11 @@ html {
         box-shadow: 5px 5px 5px #343434;
     }
 
-    .todo-icons {
+    .todo__icons {
         flex-basis: 18%;
     }
 
-    .todo-text {
+    .todo__text {
         max-width: calc(100% - var(--dots-width) - 18%);
     }
 }
