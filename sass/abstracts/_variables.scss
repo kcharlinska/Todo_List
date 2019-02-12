@@ -1,0 +1,29 @@
+// ---- FONTS ----
+
+$font-main: 'Quicksand',
+sans-serif;
+$font-weight-regular: 400;
+$font-size-regular: 18px;
+
+// ---- COLORS ----
+
+// Regular text color
+$text-color: #808080;
+// White color
+$white-color: #fff;
+// Main color
+$main-color: #F17275;
+// Heading color
+$heading-color: #5E66E7;
+
+
+// ----- BREAKPOINTS -----
+
+// Mobile phones
+$screen-sm-max: 599px;
+// Tablets and small desktops
+$screen-md-max: 1024px;
+// Large tablets and desktops
+// $screen-lg-min: 992px;
+// Large desktops
+$screen-xl-min: 1440px;

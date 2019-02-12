@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font: 400 18px "Quicksand", sans-serif;
+  color: #808080;
+}
+/*# sourceMappingURL=style.css.map */
