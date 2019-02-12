@@ -1,0 +1,13 @@
+.add-todo__btn {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $main-color;
+    font-size: 25px;
+    color: $white-color;
+    border: none;
+}
