@@ -2,6 +2,30 @@ body {
     min-height: 100vh;
 }
 
+.header {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 2fr 1fr;
+    height: calc(#{$line-height} * 3);
+    border-bottom: 1px solid $gray-color;
+    padding: 0 15px;
+
+    &__name {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        line-height: calc(#{$line-height} * 2);
+    }
+
+    &__date {
+        line-height: $line-height;
+    }
+
+    &__counter {
+        line-height: $line-height;
+        text-align: center;
+    }
+}
+
 .add-todo {
     position: fixed;
     bottom: 0;
