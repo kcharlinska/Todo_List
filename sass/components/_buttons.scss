@@ -1,3 +1,13 @@
+.todo__btn {
+    flex-basis: 15%;
+    @include flexCenter;
+
+    .btn {
+        font-size: 1.1rem;
+    }
+}
+
+
 .add-todo__btn {
     position: absolute;
     top: 0;
@@ -7,7 +17,7 @@
     height: 60px;
     border-radius: 50%;
     background-color: $main-color;
-    font-size: 25px;
+    font-size: 1.2rem;
     color: $white-color;
     border: none;
 }

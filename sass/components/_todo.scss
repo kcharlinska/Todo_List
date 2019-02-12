@@ -1,17 +1,9 @@
 .todo__container {
+    position: relative;
     height: 80px;
     border-bottom: 1px solid $gray-color;
-    padding: 0 15px;
+    // margin: 0 15px;
     display: flex;
-
-    .todo__btn {
-        flex-basis: 15%;
-        @include flexCenter;
-
-        .btn {
-            font-size: 20px;
-        }
-    }
 
     .todo__txt {
         flex-basis: 80%;
@@ -21,4 +13,15 @@
         border: none;
         padding: 10px 15px;
     }
+
+    &:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 8px;
+        background-color: $heading-color;
+    }
+
 }
