@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/style.scss",
+        "../sass/abstracts/_variables.scss",
+        "../sass/abstracts/_mixins.scss",
+        "../sass/base/_base.scss",
+        "../sass/base/_typography.scss",
+        "../sass/layout/_layout.scss",
+        "../sass/components/_buttons.scss",
+        "../sass/components/_todo.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

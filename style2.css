@@ -22,7 +22,7 @@ html {
 .app-wrapper {
     min-height: 100vh;
     background-color: var(--backgroundColor);
-    padding: 12% 6%;
+    /* padding: 12% 6%; */
 }
 
 /* --- Header --- */
@@ -41,13 +41,13 @@ html {
 /* --- To-do --- */
 
 .todo {
-    border-radius: 8px;
+    /* border-radius: 8px; */
     line-height: 3;
     margin: 15px 0;
     display: flex;
     width: 100%;
-    color: #fff;
-    background: linear-gradient(to right, var(--activeToDo) 0, #f9ad7e 100%);
+    /* color: #fff; */
+    /* background: linear-gradient(to right, var(--activeToDo) 0, #f9ad7e 100%); */
 }
 
 .todo__text--long {
@@ -115,31 +115,35 @@ html {
 
 /* --- Add to-do section --- */
 
-.header h3 {
+.add-todo__section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+}
+
+/* .header h3 {
     color: var(--activeToDo);
     text-align: right;
     font-size: 1rem;
     margin: -12px 0 40px 0;
     cursor: pointer;
     transition: .5s;
-}
+} */
 
-.header h3:hover {
+/* .header h3:hover {
     color: var(--inactive-fontColor);
-}
+} */
 
 .add-todo__input {
-    border-radius: 8px;
+    /* border-radius: 8px; */
     line-height: 3;
     margin: 15px 0;
-}
-
-.add-todo__input {
     width: 100%;
     font-size: 1rem;
     color: var(--main-fontColor);
     background-color: #fff;
-    border: 1px solid #cdcdcd;
+    border: none;
     /* box-shadow: 0 0 1px grey; */
     padding: 0 20px;
 }
