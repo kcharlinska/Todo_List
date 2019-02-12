@@ -15,6 +15,7 @@ html {
 body {
   font: 400 18px "Quicksand", sans-serif;
   color: #808080;
+  background-color: #FAFBFC;
 }
 
 h1 {
@@ -54,6 +55,11 @@ body {
   text-align: center;
 }
 
+.todo {
+  background-color: #fff;
+  margin: 15px;
+}
+
 .add-todo {
   position: fixed;
   bottom: 0;
@@ -75,5 +81,42 @@ body {
   font-size: 25px;
   color: #fff;
   border: none;
+}
+
+.todo__container {
+  height: 80px;
+  border-bottom: 1px solid #b1b1b1;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.todo__container .todo__btn {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo__container .todo__btn .btn {
+  font-size: 20px;
+}
+
+.todo__container .todo__txt {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+  background-color: transparent;
+  border: none;
+  padding: 10px 15px;
 }
 /*# sourceMappingURL=style.css.map */

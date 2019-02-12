@@ -1,0 +1,6 @@
+// Flexbox center horizontal and vertical
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

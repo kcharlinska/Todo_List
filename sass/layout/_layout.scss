@@ -26,6 +26,11 @@ body {
     }
 }
 
+.todo {
+    background-color: $white-color;
+    margin: 15px;
+}
+
 .add-todo {
     position: fixed;
     bottom: 0;

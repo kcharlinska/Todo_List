@@ -1,0 +1,24 @@
+.todo__container {
+    height: 80px;
+    border-bottom: 1px solid $gray-color;
+    padding: 0 15px;
+    display: flex;
+
+    .todo__btn {
+        flex-basis: 15%;
+        @include flexCenter;
+
+        .btn {
+            font-size: 20px;
+        }
+    }
+
+    .todo__txt {
+        flex-basis: 80%;
+        font-size: $font-size-regular;
+        font-family: $font-main;
+        background-color: transparent;
+        border: none;
+        padding: 10px 15px;
+    }
+}
