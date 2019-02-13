@@ -26,9 +26,8 @@ body {
     }
 }
 
-.todo {
-    background-color: $white-color;
-    margin: 15px;
+li {
+    list-style: none;
 }
 
 .add-todo {

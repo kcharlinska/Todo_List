@@ -28,4 +28,8 @@
         display: block;
     }
 
+    &--checked {
+        text-decoration: line-through;
+    }
+
 }

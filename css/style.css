@@ -55,9 +55,8 @@ body {
   text-align: center;
 }
 
-.todo {
-  background-color: #fff;
-  margin: 15px;
+li {
+  list-style: none;
 }
 
 .add-todo {
@@ -136,5 +135,9 @@ body {
 
 .todo__container:hover .btn {
   display: block;
+}
+
+.todo__container--checked {
+  text-decoration: line-through;
 }
 /*# sourceMappingURL=style.css.map */
