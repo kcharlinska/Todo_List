@@ -83,7 +83,11 @@ body {
 }
 
 .todo__btn .btn {
+  display: none;
+  color: #b1b1b1;
+  border: none;
   font-size: 1.1rem;
+  background-color: transparent;
 }
 
 .add-todo__btn {
@@ -96,7 +100,7 @@ body {
   height: 60px;
   border-radius: 50%;
   background-color: #F17275;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #fff;
   border: none;
 }
@@ -128,5 +132,9 @@ body {
   height: 100%;
   width: 8px;
   background-color: #5E66E7;
+}
+
+.todo__container:hover .btn {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

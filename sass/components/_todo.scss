@@ -24,4 +24,8 @@
         background-color: $heading-color;
     }
 
+    &:hover .btn {
+        display: block;
+    }
+
 }
