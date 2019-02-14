@@ -7,10 +7,41 @@
         visibility: hidden;
         opacity: 0;
         transition: visibility .3s, opacity 0.4s linear;
-        color: $gray-color;
-        border: none;
-        font-size: .8rem;
         background-color: transparent;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.btn__complete {
+    border-radius: 50%;
+    border: 2px solid $gray-color;
+}
+
+.btn__delete {
+    position: relative;
+    border: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 2px;
+        height: 15px;
+        background-color: $gray-color;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 2px;
+        height: 15px;
+        background-color: $gray-color;
     }
 }
 

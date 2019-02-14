@@ -99,10 +99,43 @@ li {
   opacity: 0;
   -webkit-transition: visibility .3s, opacity 0.4s linear;
   transition: visibility .3s, opacity 0.4s linear;
-  color: #c1c1c1;
-  border: none;
-  font-size: .8rem;
   background-color: transparent;
+  width: 15px;
+  height: 15px;
+}
+
+.btn__complete {
+  border-radius: 50%;
+  border: 2px solid #c1c1c1;
+}
+
+.btn__delete {
+  position: relative;
+  border: none;
+}
+
+.btn__delete::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  width: 2px;
+  height: 15px;
+  background-color: #c1c1c1;
+}
+
+.btn__delete::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  width: 2px;
+  height: 15px;
+  background-color: #c1c1c1;
 }
 
 .add-todo__btn {
@@ -191,6 +224,10 @@ li {
 .todo__container:hover .todo__btn {
   -ms-flex-preferred-size: calc((100% - 75%)/2);
       flex-basis: calc((100% - 75%)/2);
+}
+
+.todo__container--checked::before {
+  background-color: #c1c1c1;
 }
 
 .todo__container--checked .todo__txt {

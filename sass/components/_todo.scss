@@ -48,6 +48,9 @@
         // & .btn-default i {
         //     color: $main-color;
         // }
+        &::before {
+            background-color: $gray-color;
+        }
 
         & .todo__txt {
             text-decoration: line-through;
