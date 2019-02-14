@@ -1,17 +1,16 @@
 .todo__container {
     position: relative;
-    height: 80px;
-    border-bottom: 1px solid $gray-color;
+    height: 55px;
+    // border-bottom: 1px solid $gray-color;
+    box-shadow: 0 1px 1px -1px $gray-color;
     // margin: 0 15px;
     display: flex;
 
     .todo__txt {
-        flex-basis: 80%;
-        font-size: $font-size-regular;
-        font-family: $font-main;
+        flex-basis: 92%;
         background-color: transparent;
         border: none;
-        padding: 10px 15px;
+        padding: 10px;
     }
 
     &:hover::before {
@@ -20,12 +19,23 @@
         top: 0;
         left: 0;
         height: 100%;
-        width: 8px;
+        width: 4px;
         background-color: $heading-color;
+        transition: .4s;
     }
 
     &:hover .btn {
         display: block;
+    }
+
+    &:hover .todo__txt {
+        flex-basis: 75%;
+        transition: .4s;
+    }
+
+    &:hover .todo__btn {
+        flex-basis: calc((100% - 75%)/2);
+        transition: .4s;
     }
 
     &--checked {

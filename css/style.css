@@ -13,14 +13,25 @@ html {
 }
 
 body {
-  font: 400 18px "Quicksand", sans-serif;
+  font: 400 18px "Fira Sans", sans-serif;
   color: #808080;
   background-color: #FAFBFC;
 }
 
 h1 {
   font-weight: 400;
+  font-size: 2rem;
   color: #5E66E7;
+}
+
+p {
+  font-weight: 300;
+  font-size: .8rem;
+}
+
+input {
+  font: 0.9rem "Fira Sans", sans-serif;
+  color: #808080;
 }
 
 body {
@@ -32,26 +43,26 @@ body {
   display: grid;
   -ms-grid-columns: 70% 30%;
       grid-template-columns: 70% 30%;
-  -ms-grid-rows: 2fr 1fr;
-      grid-template-rows: 2fr 1fr;
-  height: calc(40px * 3);
-  border-bottom: 1px solid #b1b1b1;
-  padding: 0 15px;
+  -ms-grid-rows: 2fr 30px;
+      grid-template-rows: 2fr 30px;
+  -webkit-box-shadow: 0 1px 1px -1px #b1b1b1;
+          box-shadow: 0 1px 1px -1px #b1b1b1;
+  padding: 10px calc(4% + 10px);
 }
 
 .header__name {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
-  line-height: calc(40px * 2);
+  line-height: calc(30px * 2);
 }
 
 .header__date {
-  line-height: 40px;
+  line-height: 30px;
 }
 
 .header__counter {
-  line-height: 40px;
+  line-height: 30px;
   text-align: center;
 }
 
@@ -68,8 +79,8 @@ li {
 }
 
 .todo__btn {
-  -ms-flex-preferred-size: 15%;
-      flex-basis: 15%;
+  -ms-flex-preferred-size: calc((100% - 92%)/2);
+      flex-basis: calc((100% - 92%)/2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,21 +117,20 @@ li {
 
 .todo__container {
   position: relative;
-  height: 80px;
-  border-bottom: 1px solid #b1b1b1;
+  height: 55px;
+  -webkit-box-shadow: 0 1px 1px -1px #b1b1b1;
+          box-shadow: 0 1px 1px -1px #b1b1b1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .todo__container .todo__txt {
-  -ms-flex-preferred-size: 80%;
-      flex-basis: 80%;
-  font-size: 18px;
-  font-family: "Quicksand", sans-serif;
+  -ms-flex-preferred-size: 92%;
+      flex-basis: 92%;
   background-color: transparent;
   border: none;
-  padding: 10px 15px;
+  padding: 10px;
 }
 
 .todo__container:hover::before {
@@ -129,12 +139,28 @@ li {
   top: 0;
   left: 0;
   height: 100%;
-  width: 8px;
+  width: 4px;
   background-color: #5E66E7;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .todo__container:hover .btn {
   display: block;
+}
+
+.todo__container:hover .todo__txt {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.todo__container:hover .todo__btn {
+  -ms-flex-preferred-size: calc((100% - 75%)/2);
+      flex-basis: calc((100% - 75%)/2);
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .todo__container--checked {

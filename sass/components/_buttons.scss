@@ -1,5 +1,5 @@
 .todo__btn {
-    flex-basis: 15%;
+    flex-basis: calc((100% - 92%)/2);
     @include flexCenter;
 
     .btn {

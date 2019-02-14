@@ -5,10 +5,10 @@ body {
 .header {
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 2fr 1fr;
-    height: calc(#{$line-height} * 3);
-    border-bottom: 1px solid $gray-color;
-    padding: 0 15px;
+    grid-template-rows: 2fr 30px;
+    // height: calc(#{$line-height} * 3);
+    box-shadow: 0 1px 1px -1px $gray-color;
+    padding: 10px calc(4% + 10px);
 
     &__name {
         grid-column-start: 1;
