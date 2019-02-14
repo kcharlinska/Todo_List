@@ -11,35 +11,48 @@
         background-color: transparent;
         border: none;
         padding: 10px;
+        @include transition;
     }
 
-    &:hover::before {
+    &::before {
         content: '';
         position: absolute;
         top: 0;
-        left: 0;
+        left: -4px;
         height: 100%;
         width: 4px;
         background-color: $heading-color;
-        transition: .4s;
+        @include transition;
+    }
+
+    &:hover::before {
+        left: 0;
     }
 
     &:hover .btn {
-        display: block;
+        // display: block;
+        visibility: visible;
+        opacity: 1;
     }
 
     &:hover .todo__txt {
         flex-basis: 75%;
-        transition: .4s;
     }
 
     &:hover .todo__btn {
         flex-basis: calc((100% - 75%)/2);
-        transition: .4s;
     }
 
     &--checked {
-        text-decoration: line-through;
+
+        // & .btn-default i {
+        //     color: $main-color;
+        // }
+
+        & .todo__txt {
+            text-decoration: line-through;
+            color: $gray-color;
+        }
     }
 
 }

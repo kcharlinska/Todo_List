@@ -20,7 +20,7 @@ const addBtn = document.querySelector('.add-todo__btn');
 const addTodo = (todo) => {
     const todoLi = document.createElement('li');
     document.querySelector('.todo__section ul').appendChild(todoLi);
-    todoLi.innerHTML = `<div class="todo__container"><div class="todo__btn"><button class="btn btn-default complete-todo-btn"><i class="far fa-circle"></i></button></div><input type="text" class="todo__txt" placeholder="Write a ToDo..." value="${todo}"><div class="todo__btn"><button class="btn btn-danger delete-todo-btn"><i class="fa fa-times"></i></button></div></div>`;
+    todoLi.innerHTML = `<div class="todo__container"><div class="todo__btn"><button class="btn btn-default complete-todo-btn"></button></div><input type="text" class="todo__txt" placeholder="Write a ToDo..." value="${todo}"><div class="todo__btn"><button class="btn btn-danger delete-todo-btn"></button></div></div>`;
     todoLi.querySelector('.complete-todo-btn').addEventListener('click', doneTodo);
     todoLi.querySelector('.delete-todo-btn').addEventListener('click', deleteTodo);
     // console.log(todo);
