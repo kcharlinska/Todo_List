@@ -61,6 +61,7 @@ const addToList = () => {
         item.addEventListener('change', function () {
             const todoNum = Array.from(todoInputs).indexOf(item);
             todoList.splice(todoNum, 1, item.value);
+            console.log(todoList);
             countTodo();
         })
     })

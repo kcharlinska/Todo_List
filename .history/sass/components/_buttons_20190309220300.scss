@@ -2,15 +2,15 @@
     flex-basis: calc((100% - 92%)/2);
     @include flexCenter;
     @include transition;
-}
 
-.btn {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility .3s, opacity 0.4s linear;
-    background-color: transparent;
-    width: 15px;
-    height: 15px;
+    .btn {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility .3s, opacity 0.4s linear;
+        // background-color: transparent;
+        width: 15px;
+        height: 15px;
+    }
 }
 
 .btn__complete {
