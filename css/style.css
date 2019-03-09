@@ -14,7 +14,7 @@ html {
 
 body {
   font: 400 18px "Fira Sans", sans-serif;
-  color: #727272;
+  color: #767676;
 }
 
 h1 {
@@ -34,13 +34,13 @@ li {
 
 input {
   font: 0.9rem "Fira Sans", sans-serif;
-  color: #727272;
+  color: #767676;
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #b1b1b1;
+  background-color: #c6c6c6;
 }
 
 .app {
@@ -78,8 +78,8 @@ body {
       grid-template-columns: 70% 30%;
   -ms-grid-rows: 2fr 30px;
       grid-template-rows: 2fr 30px;
-  -webkit-box-shadow: 0 1px 1px -1px #b1b1b1;
-          box-shadow: 0 1px 1px -1px #b1b1b1;
+  -webkit-box-shadow: 0 1px 1px -1px #c6c6c6;
+          box-shadow: 0 1px 1px -1px #c6c6c6;
   padding: 10px calc(4% + 10px);
   z-index: 1;
 }
@@ -148,7 +148,7 @@ body {
 
 .btn__complete {
   border-radius: 50%;
-  border: 2px solid #b1b1b1;
+  border: 2px solid #c6c6c6;
 }
 
 .btn__complete--checked {
@@ -170,7 +170,7 @@ body {
   left: 50%;
   width: 2px;
   height: 15px;
-  background-color: #b1b1b1;
+  background-color: #c6c6c6;
 }
 
 .btn__delete::before {
@@ -223,8 +223,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 0 1px 1px -1px #b1b1b1;
-          box-shadow: 0 1px 1px -1px #b1b1b1;
+  -webkit-box-shadow: 0 1px 1px -1px #c6c6c6;
+          box-shadow: 0 1px 1px -1px #c6c6c6;
 }
 
 .todo__container .todo__txt {
@@ -269,11 +269,11 @@ body {
 }
 
 .todo__container--checked::before {
-  background-color: #b1b1b1;
+  background-color: #c6c6c6;
 }
 
 .todo__container--checked .todo__txt {
   text-decoration: line-through;
-  color: #b1b1b1;
+  color: #c6c6c6;
 }
 /*# sourceMappingURL=style.css.map */
