@@ -1,0 +1,25 @@
+body {
+    font: $font-weight-regular $font-size-regular $font-main;
+    color: $text-color;
+    // background-color: $bg-color;
+}
+
+h1 {
+    font-weight: $font-weight-regular;
+    font-size: 2rem;
+    color: $heading-color;
+}
+
+p {
+    font-weight: $font-weight-light;
+    font-size: .8rem;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    font: .9rem $font-main;
+    color: $text-color;
+}

@@ -1,0 +1,42 @@
+// ---- FONTS ----
+
+$font-main: 'Fira Sans',
+sans-serif;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-size-regular: 18px;
+
+// ---- COLORS ----
+
+// Regular text color
+$text-color: #727272;
+// Main color
+$main-color: #F17275;
+// Heading color
+$heading-color: #5E66E7;
+// App background color
+$bg-color: #fafbfc;
+// White color
+$white-color: #fff;
+// Gray color
+$gray-color: #b1b1b1;
+// Dark gray color
+$d-gray-color: #343434;
+// Black color
+$black-color: #000;
+
+
+
+// Header line-height
+$line-height: 30px;
+
+// ----- BREAKPOINTS -----
+
+// Mobile phones
+$screen-sm-min: 599px;
+// Tablets and small desktops
+$screen-md-min: 992px;
+// Large tablets and desktops
+$screen-lg-min: 1024px;
+// Large desktops
+$screen-xl-min: 1440px;

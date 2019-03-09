@@ -1,0 +1,51 @@
+// Flexbox center horizontal and vertical
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Repositioning element horizontal and vertical
+@mixin translate($x, $y) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate($x, $y)
+}
+
+// Transition element on hover
+@mixin transition {
+    transition: .4s linear;
+}
+
+
+
+// ----- MEDIA QUERIES -----
+
+// Small devices
+@mixin sm-media {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md-media {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg-media {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin xl-media {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
