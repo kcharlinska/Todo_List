@@ -50,7 +50,7 @@ body {
   overflow: hidden;
 }
 
-@media (min-width: 599px) {
+@media (min-width: 826px) {
   .app {
     position: absolute;
     top: 50%;

@@ -10,7 +10,7 @@ body {
     background-color: $bg-color;
     overflow: hidden;
 
-    @include sm-media {
+    @include md-media {
         @include positionCenter;
         max-width: 350px;
         max-height: 600px;
