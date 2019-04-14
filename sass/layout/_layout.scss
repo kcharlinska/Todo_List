@@ -29,7 +29,13 @@ body {
     grid-template-rows: 2fr 30px;
     box-shadow: 0 1px 1px -1px $gray-color;
     padding: 10px calc(4% + 10px);
+    background-color: $bg-color;
     z-index: 1;
+
+    @include md-media {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
 
     &__name {
         grid-column-start: 1;

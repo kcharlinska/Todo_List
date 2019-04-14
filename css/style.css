@@ -81,7 +81,15 @@ body {
   -webkit-box-shadow: 0 1px 1px -1px #c6c6c6;
           box-shadow: 0 1px 1px -1px #c6c6c6;
   padding: 10px calc(4% + 10px);
+  background-color: #FAFBFC;
   z-index: 1;
+}
+
+@media (min-width: 826px) {
+  .header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
 }
 
 .header__name {
