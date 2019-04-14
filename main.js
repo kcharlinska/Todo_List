@@ -9,9 +9,7 @@ const showTodo = () => {
         countTodo();
     })
 }
-document.addEventListener('DOMContentLoaded', function () {
-    showTodo();
-})
+document.addEventListener('DOMContentLoaded', showTodo);
 
 const addBtn = document.querySelector('.add-todo__btn');
 
@@ -44,16 +42,20 @@ const deleteTodo = (e) => {
     countTodo();
 }
 
+const focusTodo = () => {
+    document.querySelectorAll('.todo__txt').forEach((item) => {
+        item.focus();
+    })
+}
+
 addBtn.addEventListener('click', function () {
     if (todoList.length === document.querySelectorAll('input').length) {
         const todo = '';
         addTodo(todo);
-        document.querySelectorAll('.todo__txt').forEach((item) => {
-            item.focus();
-        })
         addToList();
     }
-});
+    focusTodo();
+})
 
 const addToList = () => {
     const todoInputs = document.getElementsByClassName('todo__txt');
@@ -65,7 +67,6 @@ const addToList = () => {
         })
     })
 }
-
 
 const countTodo = () => {
     const counter = document.querySelector('.header__counter');
