@@ -26,10 +26,13 @@ let active = true;
 const doneTodo = (e) => {
     const doneBtn = e.target;
     const todoItem = e.target.closest('div').parentNode;
-    todoItem.classList.contains('todo__container--checked') ? active = false : active = true;
-    todoItem.classList.toggle('todo__container--checked');
-    doneBtn.classList.contains('.btn__complete--checked') ? active = false : active = true;
-    doneBtn.classList.toggle('btn__complete--checked');
+    const inputValue = e.target.parentNode.nextSibling.value;
+    if (inputValue) {
+        todoItem.classList.contains('todo__container--checked') ? active = false : active = true;
+        todoItem.classList.toggle('todo__container--checked');
+        doneBtn.classList.contains('.btn__complete--checked') ? active = false : active = true;
+        doneBtn.classList.toggle('btn__complete--checked');
+    } else focusTodo();
 }
 
 const deleteTodo = (e) => {
