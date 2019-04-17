@@ -55,7 +55,7 @@ body {
 
 .todo__section {
     padding-top: calc(#{$line-height} * 3 + (10px * 2));
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     height: 100%;
 
     ul {
@@ -67,6 +67,12 @@ body {
 .add-todo__section {
     @include position(fixed, $bottom: 0, $left: 0);
     width: 100%;
-    height: 60px;
+    height: 80px;
+    background-color: $bg-color;
     z-index: 1;
+
+    @include md-media {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
 }
