@@ -63,11 +63,18 @@ addBtn.addEventListener('click', function () {
 const addToList = () => {
     const todoInputs = document.getElementsByClassName('todo__txt');
     Array.from(todoInputs).forEach((item) => {
-        item.addEventListener('change', function () {
+        const approveTodo = () => {
             const todoNum = Array.from(todoInputs).indexOf(item);
             todoList.splice(todoNum, 1, item.value);
             countTodo();
-        })
+        }
+        item.addEventListener('change', approveTodo)
+        item.addEventListener('keypress', (e) => {
+            if ((e.keyCode == 13) && (e.target.value)) {
+                approveTodo();
+                addBtn.focus();
+            }
+        });
     })
 }
 
