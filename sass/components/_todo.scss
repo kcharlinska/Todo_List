@@ -45,9 +45,6 @@
 
     &--checked {
 
-        // & .btn-default i {
-        //     color: $main-color;
-        // }
         &::before {
             background-color: $gray-color;
         }
