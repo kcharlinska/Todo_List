@@ -10,6 +10,11 @@
         border: none;
         padding: 10px;
         @include transition;
+
+        &:focus {
+            outline-offset: -3px;
+            outline-width: 3px;
+        }
     }
 
     &::before {
@@ -40,9 +45,6 @@
 
     &--checked {
 
-        // & .btn-default i {
-        //     color: $main-color;
-        // }
         &::before {
             background-color: $gray-color;
         }
