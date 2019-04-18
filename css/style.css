@@ -253,6 +253,11 @@ body {
   transition: .4s linear;
 }
 
+.todo__container .todo__txt:focus {
+  outline-offset: -3px;
+  outline-width: 3px;
+}
+
 .todo__container::before {
   content: '';
   position: absolute;
