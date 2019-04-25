@@ -7,5 +7,6 @@
 * JavaScript
 
 ## App demo
-* https://kcharlinska.github.io/Todo_List/
-![Preview](https://kcharlinska.github.io/Todo_List/blob/master/img/preview.png)
+https://kcharlinska.github.io/Todo_List/
+
+![Preview](https://github.com/kcharlinska/Todo_List/blob/master/img/preview.png)
